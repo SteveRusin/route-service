@@ -150,7 +150,7 @@ module.exports = {
         selector: 'property',
         modifiers: ['public'],
         leadingUnderscore: 'forbid',
-        format: ['camelCase'],
+        format: ['camelCase', 'UPPER_CASE'],
       },
       {
         selector: 'variable',
