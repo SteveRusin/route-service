@@ -1,9 +1,7 @@
 import { RouteEntity } from '../entities';
-import { RouteDto } from '../models';
+import { Route } from '../models';
 
-export function routeEntitiesToRoutes(
-  routeEntities: RouteEntity[],
-): RouteDto[] {
+export function routeEntitiesToRoutes(routeEntities: RouteEntity[]): Route[] {
   return routeEntities.map((entity) => ({
     id: entity.id,
     airline: entity.airline,

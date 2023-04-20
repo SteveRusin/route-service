@@ -17,6 +17,6 @@ export class RouteRepository {
       .createQueryBuilder('route')
       .limit(limit)
       .offset(offset)
-      .getMany();
+      .getManyAndCount();
   }
 }

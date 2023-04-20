@@ -16,7 +16,7 @@ export class CatsController {
       }),
     )
     query: RouteQuery,
-  ): Promise<RouteDto[]> {
+  ): Promise<RouteDto> {
     return this._routeService.retrieveRouteInformation(query);
   }
 }

@@ -8,9 +8,12 @@ import { routeEntitiesToRoutes } from '../mappers';
 export class RouteService {
   constructor(private _routeRepository: RouteRepository) {}
 
-  async retrieveRouteInformation(query: RouteQuery): Promise<RouteDto[]> {
-    const routes = await this._routeRepository.findMany(query);
+  async retrieveRouteInformation(query: RouteQuery): Promise<RouteDto> {
+    const [routes, count] = await this._routeRepository.findMany(query);
 
-    return routeEntitiesToRoutes(routes);
+    return {
+      count,
+      data: routeEntitiesToRoutes(routes),
+    };
   }
 }
