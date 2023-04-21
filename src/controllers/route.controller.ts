@@ -1,17 +1,5 @@
-import {
-  ApiBadRequestResponse,
-  ApiOkResponse,
-  ApiQuery,
-  ApiTags,
-  getSchemaPath,
-} from '@nestjs/swagger';
-import {
-  Controller,
-  Get,
-  Query,
-  ValidationPipe,
-  HttpException,
-} from '@nestjs/common';
+import { ApiBadRequestResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { Controller, Get, Query, ValidationPipe } from '@nestjs/common';
 
 import { RouteService } from '../services';
 import { RouteDto, RouteQuery, HttpBadRequest } from '../models';
