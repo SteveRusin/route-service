@@ -12,6 +12,7 @@
   "scripts": {
     "build": "nest build",
     "start": "node ./dist/main.js",
+    "test:ci": "node ./dist/main.js",
     "build:ci": "npm run lint && npm run find-circular-imports && npm run build",
     "start:dev": "nest start --watch --debug",
     "start:prod": "node dist/main",
