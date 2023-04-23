@@ -1,6 +1,6 @@
 services:
   route-service:
-    container_name: 'integration-route-service§'
+    container_name: 'integration-route-service'
     build:
       context: .
       target: build

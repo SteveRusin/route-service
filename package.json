@@ -20,8 +20,12 @@
     "lint": "npm run lint:eslint",
     "test": "jest",
     "find-circular-imports": "madge --circular --extensions ts --ts-config ./tsconfig.json ./**/**/*.ts",
+    "pretest:integration": "DOTENV_CONFIG_PATH=./.env.integration npm run migration:run",
     "test:integration": "DOTENV_CONFIG_PATH=./.env.integration cucumber-js --config cucumber.json",
-    "compose:test:integration": "docker compose -f docker-compose.int.yml up --build --abort-on-container-exit"
+    "compose:test:integration": "docker compose -f docker-compose.int.yml up --build --abort-on-container-exit",
+    "typeorm:cli": "ts-node -r tsconfig-paths/register -r dotenv/config ./node_modules/typeorm/cli -d src/config/typeorm.config-migrations.ts",
+    "migration:create": "typeorm migration:create",
+    "migration:run": "npm run typeorm:cli -- migration:run"
   },
   "dependencies": {
     "@fastify/static": "^6.10.1",

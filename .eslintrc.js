@@ -22,7 +22,7 @@ module.exports = {
   rules: {
     "@typescript-eslint/array-type": "error",
     '@typescript-eslint/no-explicit-any': isProd() ? 'error' : 'warn',
-    'id-length': ['error', { min: 3, exceptions: ['i', 'j', '_', 'err', 'id', 'pg'], properties: 'never' }],
+    'id-length': ['error', { min: 3, exceptions: ['i', 'j', '_', 'err', 'id', 'pg', 'up'], properties: 'never' }],
     '@typescript-eslint/no-explicit-any': isProd() ? 'error' : 'warn',
     'import/order': [
       'error',

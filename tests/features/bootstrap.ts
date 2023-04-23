@@ -5,13 +5,19 @@ import {
   setDefaultTimeout,
   Before,
 } from '@cucumber/cucumber';
+import { DataSource } from 'typeorm';
 
 import { bootstrap } from '../../src/bootstrap';
+import { truncateTables } from '../utils';
 
 const app = bootstrap();
 
 BeforeAll(async () => {
-  await app;
+  const server = await app;
+
+  const dataSource = server.get(DataSource);
+
+  await truncateTables(dataSource);
 });
 
 Before(async function () {
