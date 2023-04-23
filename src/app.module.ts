@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { CatsController, HeathCheckController } from './controllers';
+import { RouteController, HeathCheckController } from './controllers';
 import { RouteService } from './services';
 import { APP_CONFIG } from './config';
 import { RouteEntity } from './entities';
@@ -22,7 +22,7 @@ import { RouteRepository } from './infrastructure';
     }),
     TypeOrmModule.forFeature([RouteEntity]),
   ],
-  controllers: [CatsController, HeathCheckController],
+  controllers: [RouteController, HeathCheckController],
   providers: [RouteRepository, RouteService],
 })
 export class AppModule {}

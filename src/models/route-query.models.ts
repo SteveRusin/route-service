@@ -15,7 +15,7 @@ export class RouteQuery {
     type: 'number',
     default: 0,
   })
-  @Max(2_000)
+  @Max(5_000)
   @IsInt()
   @Transform((params) => parseInt(params.value))
   offset = 0;

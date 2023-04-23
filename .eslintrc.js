@@ -221,7 +221,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.spec.ts', '*.e2e-spec.ts'],
+      files: ['*.spec.ts', '*.spec-util.ts'],
       env: {
         jest: true,
       },

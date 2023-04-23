@@ -5,7 +5,7 @@ import { RouteService } from '../services';
 import { RouteDto, RouteQuery, HttpBadRequest } from '../models';
 
 @Controller('routes')
-export class CatsController {
+export class RouteController {
   constructor(private _routeService: RouteService) {}
 
   @Get()
