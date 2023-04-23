@@ -1,5 +1,5 @@
 import { RouteService } from '../services/route.service';
-import { createStubInstance } from '../../test/utils';
+import { createStubInstance } from '../../tests/utils';
 
 import { RouteController } from './route.controller';
 
