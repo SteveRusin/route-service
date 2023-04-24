@@ -37,6 +37,10 @@ export async function bootstrap() {
 
   await app.listen(APP_CONFIG.PORT, '0.0.0.0', () => {
     logger.log(`App is listening on http://localhost:${APP_CONFIG.PORT}`);
+
+    logger.log(
+      `Swagger docs available on http://localhost:${APP_CONFIG.PORT}/api`,
+    );
   });
 
   return app;

@@ -22,6 +22,8 @@
     "pretest:integration": "DOTENV_CONFIG_PATH=./.env.integration npm run migration:run",
     "test:integration": "DOTENV_CONFIG_PATH=./.env.integration cucumber-js --config cucumber.json",
     "compose:test:integration": "docker compose -f docker-compose.int.yml up --build --abort-on-container-exit",
+    "compose:db:up": "docker compose -f docker-compose.dev.yml up database",
+    "compose:db-int:up": "docker compose -f docker-compose.int.yml up database",
     "typeorm:cli": "ts-node -r tsconfig-paths/register -r dotenv/config ./node_modules/typeorm/cli -d src/config/typeorm.config-migrations.ts",
     "migration:create": "typeorm migration:create",
     "migration:run": "npm run typeorm:cli -- migration:run"

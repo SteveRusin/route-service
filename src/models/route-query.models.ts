@@ -14,6 +14,7 @@ export class RouteQuery {
   @ApiPropertyOptional({
     type: 'number',
     default: 0,
+    maximum: 5_000,
   })
   @Max(5_000)
   @IsInt()
