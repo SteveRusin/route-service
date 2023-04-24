@@ -4,6 +4,11 @@
 
 This microservice is a part of flight booking project. The aim is to provide API for interaction with flight info information.
 
+## Prerequisite
+
+- Node >= v18
+- Docker >=20
+
 ## Project installation instructions
 
 1. Clone the project
@@ -71,3 +76,7 @@ Project can be configured using `.env` file for local development and `.env.inte
 
 - To run int tests in docker run `npm run compose:test:integration`
 - To run int tests outside docker you need to start integration image of database by running `npm run compose:db-int:up` followed by `npm run test:integration` command.
+
+## CI/CD
+
+- CD/CD is done using [github action](./.github/workflows/push_main.yml)
