@@ -27,8 +27,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: integration-flight-booking
-    volumes:
-      - ./sql/int-data:/var/lib/postgresql/data
 
 volumes:
   db-data:
