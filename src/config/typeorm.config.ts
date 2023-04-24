@@ -11,6 +11,6 @@ export const TYPEORM_CONFIG: TypeOrmModuleOptions = {
   port: APP_CONFIG.DB_PORT,
   username: APP_CONFIG.DB_USER,
   password: APP_CONFIG.DB_PASSWORD,
-  entities: [join(__dirname, '../entities/*.entity{.ts, .js}')],
+  entities: [join(__dirname, '../entities/*.entity.{ts,js}')],
   migrations: [join(__dirname, '../migrations/*')],
 };
